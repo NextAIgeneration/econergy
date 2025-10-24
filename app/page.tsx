@@ -196,6 +196,74 @@ export default function Home() {
 
         <section className="animate-on-scroll" style={{ background: 'rgba(255, 255, 255, 0.05)', padding: '40px', margin: '30px 0', borderRadius: '15px', border: '1px solid rgba(255, 255, 255, 0.1)', backdropFilter: 'blur(10px)' }}>
           <h2 style={{ color: '#FF9800', fontSize: '2em', marginBottom: '20px', borderBottom: '2px solid rgba(255, 152, 0, 0.3)', paddingBottom: '10px' }}>
+            🏠 Captation 3D & Digital Twin
+          </h2>
+          <p style={{ color: '#c0c0c0', fontSize: '1.05em', lineHeight: 1.8, marginBottom: '30px' }}>
+            Numérisation complète des habitations en 3D (Matterport + LiDAR) pour créer des jumeaux numériques interactifs intégrant les capteurs IoT, flux énergie temps réel et plans 2D navigables.
+          </p>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '25px', marginTop: '30px', marginBottom: '40px' }}>
+            {[
+              {
+                icon: '📷',
+                title: 'Capture Matterport',
+                desc: 'Scanner 3D habitation complète - Précision 1cm - Visites virtuelles immersives 360°'
+              },
+              {
+                icon: '🗺️',
+                title: 'Plans 2D Intelligents',
+                desc: 'Plans architecturaux annotés - Zones thermiques - Flux énergie - Emplacements capteurs IoT'
+              },
+              {
+                icon: '🎮',
+                title: 'Modèle 3D Interactif',
+                desc: 'Navigation temps réel WebGL - Overlay données capteurs - Visualisation flux énergie tri-source'
+              },
+              {
+                icon: '📊',
+                title: 'Digital Twin Live',
+                desc: 'Synchronisation IoT temps réel - Historiques métriques - Prédictions IA - Dashboard immersif'
+              }
+            ].map((feature, idx) => (
+              <div
+                key={idx}
+                style={{
+                  background: 'rgba(255, 255, 255, 0.03)',
+                  padding: '25px',
+                  borderRadius: '12px',
+                  border: '1px solid rgba(255, 255, 255, 0.08)',
+                  transition: 'transform 0.3s, border-color 0.3s'
+                }}
+                onMouseOver={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-5px)';
+                  e.currentTarget.style.borderColor = 'rgba(255, 152, 0, 0.5)';
+                }}
+                onMouseOut={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.08)';
+                }}
+              >
+                <h4 style={{
+                  color: '#FF9800',
+                  fontSize: '1.2em',
+                  marginBottom: '15px'
+                }}>
+                  {feature.icon} {feature.title}
+                </h4>
+                <p style={{
+                  color: '#c0c0c0',
+                  fontSize: '1em',
+                  lineHeight: 1.6
+                }}>
+                  {feature.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="animate-on-scroll" style={{ background: 'rgba(255, 255, 255, 0.05)', padding: '40px', margin: '30px 0', borderRadius: '15px', border: '1px solid rgba(255, 255, 255, 0.1)', backdropFilter: 'blur(10px)' }}>
+          <h2 style={{ color: '#FF9800', fontSize: '2em', marginBottom: '20px', borderBottom: '2px solid rgba(255, 152, 0, 0.3)', paddingBottom: '10px' }}>
             🔧 Stack Hardware IoT
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '25px', marginTop: '30px' }}>
@@ -227,6 +295,55 @@ export default function Home() {
                 <div style={{ fontSize: '3.5em', marginBottom: '15px' }}>{hw.icon}</div>
                 <h4 style={{ color: '#FF9800', fontSize: '1.2em', marginBottom: '15px', fontWeight: 700 }}>{hw.title}</h4>
                 <p style={{ color: '#c0c0c0', lineHeight: 1.6, fontSize: '1em' }}>{hw.desc}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="animate-on-scroll" style={{ background: 'rgba(255, 255, 255, 0.05)', padding: '40px', margin: '30px 0', borderRadius: '15px', border: '1px solid rgba(255, 255, 255, 0.1)', backdropFilter: 'blur(10px)' }}>
+          <h2 style={{ color: '#FF9800', fontSize: '2em', marginBottom: '20px', borderBottom: '2px solid rgba(255, 152, 0, 0.3)', paddingBottom: '10px' }}>
+            📈 Métriques Habitation Pilote
+          </h2>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '20px' }}>
+            {[
+              { value: '150 m²', label: 'Surface Scannée 3D' },
+              { value: '28', label: 'Capteurs IoT Déployés' },
+              { value: '24/7', label: 'Monitoring Temps Réel' },
+              { value: '-42%', label: 'Réduction Consommation' },
+              { value: '100%', label: 'Autonomie Énergétique' },
+              { value: '0€', label: 'Coût Cloud (IPFS)' }
+            ].map((metric, idx) => (
+              <div
+                key={idx}
+                style={{
+                  background: 'linear-gradient(135deg, rgba(255, 152, 0, 0.15) 0%, rgba(255, 183, 77, 0.15) 100%)',
+                  padding: '20px',
+                  borderRadius: '10px',
+                  borderLeft: '4px solid #FF9800',
+                  transition: 'transform 0.3s ease'
+                }}
+                onMouseOver={(e) => {
+                  e.currentTarget.style.transform = 'scale(1.05)';
+                }}
+                onMouseOut={(e) => {
+                  e.currentTarget.style.transform = 'scale(1)';
+                }}
+              >
+                <div style={{
+                  fontSize: '2em',
+                  fontWeight: 800,
+                  color: '#FF9800',
+                  marginBottom: '5px'
+                }}>
+                  {metric.value}
+                </div>
+                <div style={{
+                  color: '#FFB74D',
+                  fontSize: '0.95em'
+                }}>
+                  {metric.label}
+                </div>
               </div>
             ))}
           </div>
