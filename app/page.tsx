@@ -71,14 +71,14 @@ export default function Home() {
             ⚡ 1 econergy Platform
           </h1>
           <p style={{ fontSize: '1.3em', color: '#FFB74D', marginBottom: '30px' }}>
-            IoT Smart Energy • Orange Pi / Jetson Nano • LoRa / IPFS • Monitoring Temps Réel
+            Économie Circulaire Éco Locale • IoT Smart Energy • Orange Pi / Jetson Nano • LoRa / IPFS
           </p>
           <p style={{ fontSize: '1em', color: '#888', marginBottom: '30px' }}>
-            Hardware Open Source • Connectivité Décentralisée • Analytics IA • Appel COSMIC EU
+            Hardware Open Source • Connectivité Décentralisée • Analytics IA • Autonomie Territoriale • COSMIC EU
           </p>
 
           <div style={{ display: 'flex', gap: '15px', justifyContent: 'center', flexWrap: 'wrap', marginTop: '30px' }}>
-            {['✅ Production Ready', '📡 LoRa + IPFS', '🏠 IoT Smart Home', '📊 Analytics IA', '🇪🇺 COSMIC EU'].map((badge, idx) => (
+            {['♻️ Économie Circulaire', '🏠 Autonomie Locale', '📡 LoRa + IPFS', '📊 Analytics IA', '🇪🇺 COSMIC EU'].map((badge, idx) => (
               <span key={idx} style={{
                 padding: '8px 16px',
                 background: 'rgba(255, 152, 0, 0.2)',
@@ -351,7 +351,7 @@ export default function Home() {
 
         <footer style={{ textAlign: 'center', padding: '40px 20px', borderTop: '1px solid rgba(255, 255, 255, 0.1)', marginTop: '60px', color: '#666' }}>
           <p style={{ fontSize: '1em', color: '#FFB74D', marginBottom: '10px' }}>
-            Énergie Autonome • IoT Décentralisé • Zéro Dépendance Réseau
+            ♻️ Économie Circulaire Éco Locale • Autonomie Territoriale • Zéro Dépendance
           </p>
           <p style={{ fontSize: '0.9em', color: '#888', marginTop: '10px' }}>
             FFT Cognitive Foundation • 1 econergy Platform • COSMIC EU 2025
