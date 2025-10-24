@@ -118,11 +118,11 @@ export default function Home() {
 
           <div style={{ display: 'flex', gap: '10px', justifyContent: 'center', marginBottom: '30px', flexWrap: 'wrap', marginTop: '30px' }}>
             {[
-              { id: 'overview', label: '⚡ Vue Ensemble', icon: '🏗️' },
-              { id: 'hardware', label: '🔧 Hardware', icon: '🔧' },
-              { id: 'connectivity', label: '📡 Connectivité', icon: '📡' },
-              { id: 'monitoring', label: '📊 Monitoring', icon: '📊' },
-              { id: 'integration', label: '🏠 Intégration', icon: '🏠' }
+              { id: 'overview', label: '⚡ Vue Ensemble' },
+              { id: 'hardware', label: '🔧 Hardware' },
+              { id: 'connectivity', label: '📡 Connectivité' },
+              { id: 'monitoring', label: '📊 Monitoring' },
+              { id: 'integration', label: '🏠 Intégration' }
             ].map((diagram) => (
               <button key={diagram.id} onClick={() => handleManualSelect(diagram.id)} style={{
                 padding: '12px 20px',
@@ -150,7 +150,7 @@ export default function Home() {
                   e.currentTarget.style.color = '#c0c0c0';
                 }
               }}
-              >{diagram.icon} {diagram.label}</button>
+              >{diagram.label}</button>
             ))}
           </div>
 
@@ -357,8 +357,8 @@ export default function Home() {
             FFT Cognitive Foundation • 1 econergy Platform • COSMIC EU 2025
           </p>
           <p style={{ marginTop: '15px' }}>
-            <a href="https://github.com/NextAIgeneration" style={{ color: '#FF9800', textDecoration: 'none', marginRight: '20px' }}>GitHub</a>
-            <a href="/docs" style={{ color: '#FF9800', textDecoration: 'none' }}>Documentation</a>
+            <a href="https://github.com/NextAIgeneration/econergy" style={{ color: '#FF9800', textDecoration: 'none', marginRight: '20px' }}>GitHub</a>
+            <span style={{ color: '#666', fontSize: '0.9em' }}>Documentation en cours de rédaction</span>
           </p>
         </footer>
 
