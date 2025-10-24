@@ -43,9 +43,9 @@ export default function BatimentIntelligent() {
       title: 'Intégration Tri-Source',
       icon: '⚡',
       features: [
-        'Vortex Schauberger (circuit eau)',
-        'Tesla Tellurique (ancrage terre)',
-        'Tesla Atmosphérique (toiture)',
+        'Hydraulique (circuit eau)',
+        'Géothermique (ancrage terre)',
+        'Atmosphérique (toiture)',
         'Stockage batterie tampon'
       ]
     }

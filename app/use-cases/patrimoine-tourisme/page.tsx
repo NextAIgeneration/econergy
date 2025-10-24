@@ -23,8 +23,8 @@ export default function PatrimoineTourisme() {
       title: 'Énergie Non-Invasive',
       icon: '♻️',
       features: [
-        'Tesla Tellurique (fondations anciennes)',
-        'Vortex Schauberger (circuits eau existants)',
+        'Géothermique (fondations anciennes)',
+        'Hydraulique (circuits eau existants)',
         'Zéro travaux lourds (contraintes ABF)',
         'Réversibilité totale'
       ]

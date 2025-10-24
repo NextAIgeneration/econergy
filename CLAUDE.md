@@ -48,7 +48,7 @@ Primary: Orange #FF9800 (gradient)
 
 **Architecture Pages Créées (4):**
 - ✅ `/architecture/hardware-edge` - Orange Pi, Jetson Nano, Arduino + LoRa/IPFS
-- ✅ `/architecture/energie-tri-source` - Vortex Schauberger + Tesla Tellurique + Atmosphérique
+- ✅ `/architecture/energie-tri-source` - Hydraulique + Géothermique + Atmosphérique
 - ✅ `/architecture/digital-twin-3d` - Matterport + WebGL + IoT Overlay temps réel
 - ✅ `/architecture/backend-saas` - FastAPI + Supabase + Redis + ML Pipeline
 
@@ -80,7 +80,7 @@ Primary: Orange #FF9800 (gradient)
 - ✅ Created 5 use cases pages (habitat-autonome, batiment-intelligent, quartier-resilient, patrimoine-tourisme, campus-educatif)
 - ✅ Added use cases section to homepage with navigation cards
 - ✅ Applied orange theme (#FF9800) with cyan complementary shadow (#0098FF)
-- ✅ Integrated tri-source energy terminology (Schauberger + Tesla)
+- ✅ Integrated tri-source energy terminology (Hydraulique + Géothermique + Atmosphérique)
 - ✅ Built successfully: 9 pages generated
 
 **Corrections Charte Graphique:**
@@ -117,7 +117,7 @@ Repository:
 ```
 
 ### **Key Features**
-- ⚡ Tri-source energy (Vortex Schauberger + Tesla tellurique/atmosphérique)
+- ⚡ Tri-source energy (Hydraulique + Géothermique + Atmosphérique)
 - 🏠 Digital Twin 3D (Matterport integration)
 - 📡 IoT Edge (Orange Pi / Jetson Nano / Arduino)
 - 📊 LoRa / IPFS decentralized connectivity
@@ -165,7 +165,7 @@ Shadow: Cyan #0098FF (complementary)
 ### **Court-terme (Aujourd'hui)**
 - [x] Créer `/architecture` pages (4/4) - FAIT ✅
   - [x] `/architecture/hardware-edge` (Orange Pi, Jetson, Arduino)
-  - [x] `/architecture/energie-tri-source` (Schauberger + Tesla)
+  - [x] `/architecture/energie-tri-source` (Hydraulique + Géothermique + Atmosphérique)
   - [x] `/architecture/digital-twin-3d` (Matterport + WebGL)
   - [x] `/architecture/backend-saas` (FastAPI + Supabase)
 - [ ] Adapter diagrammes depuis COSMIC RAG:
@@ -235,9 +235,9 @@ Deployment:
 ## 💡 NOTES IMPORTANTES
 
 **Tri-Source Energy Terminology:**
-- Vortex Schauberger (eau) - 40%
-- Tesla Tellurique (terre) - 35%
-- Tesla Atmosphérique (ciel) - 25%
+- Hydraulique (eau) - 40%
+- Géothermique (terre) - 35%
+- Atmosphérique (ciel) - 25%
 - Autonomie 100% - Zéro réseau
 
 **Digital Twin Workflow:**

@@ -31,7 +31,7 @@ export default function EnergieTriSource() {
             color: '#FFB74D',
             marginBottom: '40px'
           }}>
-            Vortex Schauberger + Tesla Tellurique + Tesla Atmosphérique = 100% Autonomie
+            Hydraulique + Géothermique + Atmosphérique = 100% Autonomie
           </p>
         </header>
 
@@ -47,10 +47,10 @@ export default function EnergieTriSource() {
             fontSize: '2em',
             marginBottom: '25px'
           }}>
-            🌊 1. Vortex Schauberger (40%)
+            🌊 1. Énergie Hydraulique (40%)
           </h2>
           <p style={{ color: '#c0c0c0', fontSize: '1.1em', lineHeight: 1.8, marginBottom: '20px' }}>
-            Turbine à implosion hydrodynamique inspirée des travaux de Viktor Schauberger.
+            Turbine à implosion hydrodynamique basée sur mouvement vortex optimisé.
           </p>
           <ul style={{ color: '#c0c0c0', lineHeight: 2.5, fontSize: '1.1em' }}>
             <li><strong style={{ color: '#FFB74D' }}>Principe:</strong> Mouvement vortex + implosion (vs explosion classique)</li>
@@ -72,10 +72,10 @@ export default function EnergieTriSource() {
             fontSize: '2em',
             marginBottom: '25px'
           }}>
-            🌍 2. Tesla Tellurique (35%)
+            🌍 2. Énergie Géothermique (35%)
           </h2>
           <p style={{ color: '#c0c0c0', fontSize: '1.1em', lineHeight: 1.8, marginBottom: '20px' }}>
-            Captation des courants telluriques terrestres (théories Nikola Tesla).
+            Captation des courants telluriques terrestres par électrodes géomagnétiques.
           </p>
           <ul style={{ color: '#c0c0c0', lineHeight: 2.5, fontSize: '1.1em' }}>
             <li><strong style={{ color: '#FFB74D' }}>Principe:</strong> Électrodes géomagnétiques enfouies (10-50m profondeur)</li>
@@ -97,13 +97,13 @@ export default function EnergieTriSource() {
             fontSize: '2em',
             marginBottom: '25px'
           }}>
-            ☁️ 3. Tesla Atmosphérique (25%)
+            ☁️ 3. Énergie Atmosphérique (25%)
           </h2>
           <p style={{ color: '#c0c0c0', fontSize: '1.1em', lineHeight: 1.8, marginBottom: '20px' }}>
             Captation de l'électricité atmosphérique (charge ionosphère + foudre diffuse).
           </p>
           <ul style={{ color: '#c0c0c0', lineHeight: 2.5, fontSize: '1.1em' }}>
-            <li><strong style={{ color: '#FFB74D' }}>Principe:</strong> Antenne haute altitude + condensateurs Tesla</li>
+            <li><strong style={{ color: '#FFB74D' }}>Principe:</strong> Antenne haute altitude + condensateurs haute tension</li>
             <li><strong style={{ color: '#FFB74D' }}>Source:</strong> Gradient électrique air (100V/m à 10km)</li>
             <li><strong style={{ color: '#FFB74D' }}>Rendement:</strong> 25% de la production totale</li>
             <li><strong style={{ color: '#FFB74D' }}>Avantage:</strong> Complément parfait (actif jour/nuit + orages)</li>
@@ -132,7 +132,7 @@ export default function EnergieTriSource() {
             <div style={{ padding: '25px', background: 'rgba(255, 152, 0, 0.1)', borderRadius: '10px' }}>
               <h3 style={{ color: '#FFB74D', fontSize: '1.3em', marginBottom: '15px' }}>Batteries Lithium</h3>
               <p style={{ color: '#c0c0c0', lineHeight: 1.8 }}>
-                Tesla Powerwall (13.5 kWh) ou équivalent. Autonomie 48h minimum sans production.
+                Batteries lithium haute capacité (13.5 kWh). Autonomie 48h minimum sans production.
               </p>
             </div>
 

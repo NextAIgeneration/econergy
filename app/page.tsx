@@ -275,7 +275,7 @@ export default function Home() {
               { icon: '🤖', title: 'Jetson Nano', desc: 'GPU CUDA - ML Edge - Computer Vision' },
               { icon: '⚙️', title: 'Arduino Sensors', desc: 'Temperature / Humidity / Energy Meters' },
               { icon: '📡', title: 'LoRa Module', desc: 'Long Range - Low Power - 15km range' },
-              { icon: '⚡', title: 'Énergie Tri-Source', desc: 'Vortex Schauberger (eau) + Tesla tellurique/atmosphérique - Autonomie 100%' },
+              { icon: '⚡', title: 'Énergie Tri-Source', desc: 'Hydraulique (eau) + Géothermique (terre) + Atmosphérique (air) - Autonomie 100%' },
               { icon: '📊', title: 'IPFS Storage', desc: 'Décentralisé - Immutable - P2P' }
             ].map((hw, idx) => (
               <div key={idx} style={{
@@ -472,7 +472,7 @@ export default function Home() {
               {
                 icon: '⚡',
                 title: 'Énergie Tri-Source',
-                desc: 'Vortex Schauberger + Tesla Tellurique + Atmosphérique = 100% autonomie',
+                desc: 'Hydraulique + Géothermique + Atmosphérique = 100% autonomie',
                 link: '/architecture/energie-tri-source'
               },
               {

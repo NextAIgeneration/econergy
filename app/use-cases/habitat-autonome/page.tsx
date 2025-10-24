@@ -23,9 +23,9 @@ export default function HabitatAutonome() {
       title: 'Énergie Tri-Source',
       icon: '⚡',
       features: [
-        'Vortex Schauberger (eau) - 40%',
-        'Tesla Tellurique (terre) - 35%',
-        'Tesla Atmosphérique (ciel) - 25%',
+        'Hydraulique (eau) - 40%',
+        'Géothermique (terre) - 35%',
+        'Atmosphérique (ciel) - 25%',
         'Autonomie 100% - Zéro réseau'
       ]
     },
