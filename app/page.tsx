@@ -437,6 +437,102 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="animate-on-scroll" style={{
+          padding: '60px 30px',
+          background: 'rgba(255, 255, 255, 0.03)',
+          borderRadius: '20px',
+          marginBottom: '60px',
+          border: '1px solid rgba(255, 152, 0, 0.2)'
+        }}>
+          <h2 style={{
+            fontSize: '2.5em',
+            background: 'linear-gradient(135deg, #FF9800 0%, #F57C00 100%)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            textAlign: 'center',
+            marginBottom: '20px',
+            fontWeight: 800
+          }}>
+            🏗️ Architecture Technique
+          </h2>
+          <p style={{ color: '#c0c0c0', fontSize: '1.05em', lineHeight: 1.8, marginBottom: '30px', textAlign: 'center' }}>
+            Plongez dans les détails techniques de la plateforme econergy : hardware, énergie tri-source, digital twin 3D et backend cloud.
+          </p>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '25px', marginTop: '30px' }}>
+            {[
+              {
+                icon: '📡',
+                title: 'Hardware Edge IoT',
+                desc: 'Orange Pi, Jetson Nano, Arduino - Capteurs décentralisés avec LoRa/IPFS',
+                link: '/architecture/hardware-edge'
+              },
+              {
+                icon: '⚡',
+                title: 'Énergie Tri-Source',
+                desc: 'Vortex Schauberger + Tesla Tellurique + Atmosphérique = 100% autonomie',
+                link: '/architecture/energie-tri-source'
+              },
+              {
+                icon: '🏠',
+                title: 'Digital Twin 3D',
+                desc: 'Matterport + WebGL + IoT Overlay temps réel - Visualisation immersive',
+                link: '/architecture/digital-twin-3d'
+              },
+              {
+                icon: '☁️',
+                title: 'Backend SaaS',
+                desc: 'FastAPI + Supabase + Redis + ML Pipeline - Cloud orchestration',
+                link: '/architecture/backend-saas'
+              }
+            ].map((arch, idx) => (
+              <a
+                key={idx}
+                href={arch.link}
+                style={{
+                  display: 'block',
+                  padding: '30px',
+                  background: 'rgba(255, 255, 255, 0.05)',
+                  borderRadius: '15px',
+                  border: '1px solid rgba(255, 255, 255, 0.08)',
+                  textDecoration: 'none',
+                  transition: 'all 0.3s ease',
+                  cursor: 'pointer'
+                }}
+                onMouseOver={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-5px)';
+                  e.currentTarget.style.borderColor = 'rgba(255, 152, 0, 0.5)';
+                  e.currentTarget.style.boxShadow = '0 10px 30px rgba(255, 152, 0, 0.3)';
+                }}
+                onMouseOut={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.08)';
+                  e.currentTarget.style.boxShadow = 'none';
+                }}
+              >
+                <div style={{ fontSize: '3em', marginBottom: '15px', textAlign: 'center' }}>{arch.icon}</div>
+                <h4 style={{
+                  color: '#FF9800',
+                  fontSize: '1.2em',
+                  marginBottom: '15px',
+                  fontWeight: 700,
+                  textAlign: 'center'
+                }}>
+                  {arch.title}
+                </h4>
+                <p style={{
+                  color: '#c0c0c0',
+                  lineHeight: 1.6,
+                  fontSize: '0.95em',
+                  textAlign: 'center'
+                }}>
+                  {arch.desc}
+                </p>
+              </a>
+            ))}
+          </div>
+        </section>
+
         <footer style={{ textAlign: 'center', padding: '40px 20px', borderTop: '1px solid rgba(255, 255, 255, 0.1)', marginTop: '60px', color: '#666' }}>
           <p style={{ fontSize: '1em', color: '#FFB74D', marginBottom: '10px' }}>
             ♻️ Économie Circulaire Éco Locale • Autonomie Territoriale • Zéro Dépendance
