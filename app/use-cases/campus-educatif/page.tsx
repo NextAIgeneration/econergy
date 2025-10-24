@@ -84,7 +84,8 @@ export default function CampusEducatif() {
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             marginBottom: '20px',
-            fontWeight: 800
+            fontWeight: 800,
+            textShadow: '0 4px 20px rgba(0, 152, 255, 0.25), 0 8px 40px rgba(0, 152, 255, 0.15)'
           }}>
             🎓 Campus Éducatif
           </h1>
