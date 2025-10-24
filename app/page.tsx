@@ -349,6 +349,93 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="animate-on-scroll" style={{ background: 'rgba(255, 255, 255, 0.05)', padding: '40px', margin: '30px 0', borderRadius: '15px', border: '1px solid rgba(255, 255, 255, 0.1)', backdropFilter: 'blur(10px)' }}>
+          <h2 style={{ color: '#FF9800', fontSize: '2em', marginBottom: '20px', borderBottom: '2px solid rgba(255, 152, 0, 0.3)', paddingBottom: '10px' }}>
+            🎯 Use Cases COSMIC
+          </h2>
+          <p style={{ color: '#c0c0c0', fontSize: '1.05em', lineHeight: 1.8, marginBottom: '30px' }}>
+            Découvrez les applications concrètes de la plateforme econergy à travers différents secteurs et échelles d'autonomie énergétique.
+          </p>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '25px', marginTop: '30px' }}>
+            {[
+              {
+                icon: '🏠',
+                title: 'Habitat Autonome',
+                desc: 'Maison 100% autonome en énergie avec digital twin 3D et capteurs IoT temps réel',
+                link: '/use-cases/habitat-autonome'
+              },
+              {
+                icon: '🏢',
+                title: 'Bâtiment Intelligent',
+                desc: 'Tertiaire autonome avec IA prédictive et digital twin BIM temps réel',
+                link: '/use-cases/batiment-intelligent'
+              },
+              {
+                icon: '🏘️',
+                title: 'Quartier Résilient',
+                desc: 'Collectivités autonomes avec micro-réseau local et gouvernance participative',
+                link: '/use-cases/quartier-resilient'
+              },
+              {
+                icon: '🏛️',
+                title: 'Patrimoine & Tourisme',
+                desc: 'Monuments historiques autonomes avec digital twin patrimonial et expérience visiteur enrichie',
+                link: '/use-cases/patrimoine-tourisme'
+              },
+              {
+                icon: '🎓',
+                title: 'Campus Éducatif',
+                desc: 'Université autonome avec living lab IoT et engagement communautaire étudiant',
+                link: '/use-cases/campus-educatif'
+              }
+            ].map((usecase, idx) => (
+              <a
+                key={idx}
+                href={usecase.link}
+                style={{
+                  textDecoration: 'none',
+                  background: 'rgba(255, 255, 255, 0.03)',
+                  padding: '25px',
+                  borderRadius: '12px',
+                  border: '1px solid rgba(255, 255, 255, 0.08)',
+                  transition: 'all 0.3s ease',
+                  display: 'block'
+                }}
+                onMouseOver={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-5px)';
+                  e.currentTarget.style.borderColor = 'rgba(255, 152, 0, 0.5)';
+                  e.currentTarget.style.boxShadow = '0 10px 30px rgba(255, 152, 0, 0.2)';
+                }}
+                onMouseOut={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.08)';
+                  e.currentTarget.style.boxShadow = 'none';
+                }}
+              >
+                <div style={{ fontSize: '3em', marginBottom: '15px', textAlign: 'center' }}>{usecase.icon}</div>
+                <h4 style={{
+                  color: '#FF9800',
+                  fontSize: '1.2em',
+                  marginBottom: '15px',
+                  fontWeight: 700,
+                  textAlign: 'center'
+                }}>
+                  {usecase.title}
+                </h4>
+                <p style={{
+                  color: '#c0c0c0',
+                  lineHeight: 1.6,
+                  fontSize: '0.95em',
+                  textAlign: 'center'
+                }}>
+                  {usecase.desc}
+                </p>
+              </a>
+            ))}
+          </div>
+        </section>
+
         <footer style={{ textAlign: 'center', padding: '40px 20px', borderTop: '1px solid rgba(255, 255, 255, 0.1)', marginTop: '60px', color: '#666' }}>
           <p style={{ fontSize: '1em', color: '#FFB74D', marginBottom: '10px' }}>
             ♻️ Économie Circulaire Éco Locale • Autonomie Territoriale • Zéro Dépendance
