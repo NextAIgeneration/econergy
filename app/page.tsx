@@ -36,7 +36,7 @@ export default function Home() {
   return (
     <div style={{
       fontFamily: "'Poppins', sans-serif",
-      background: 'linear-gradient(135deg, #1a3a1a 0%, #0f1f0a 50%, #0a1405 100%)',
+      background: 'linear-gradient(135deg, #3d2817 0%, #2d1b0e 50%, #1a0f08 100%)',
       color: '#e0e0e0',
       minHeight: '100vh'
     }}>
@@ -46,6 +46,7 @@ export default function Home() {
         @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
         @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.7; } }
         .pulse { animation: pulse 2s ease-in-out infinite; }
+        .animate-on-scroll { animation: fadeInUp 0.6s ease-out forwards; }
       `}</style>
 
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '40px 20px' }}>
@@ -61,7 +62,7 @@ export default function Home() {
         }}>
           <h1 style={{
             fontSize: '3.5em',
-            background: 'linear-gradient(135deg, #4CAF50 0%, #8BC34A 100%)',
+            background: 'linear-gradient(135deg, #FF9800 0%, #F57C00 100%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             marginBottom: '20px',
@@ -69,7 +70,7 @@ export default function Home() {
           }}>
             ⚡ 1 econergy Platform
           </h1>
-          <p style={{ fontSize: '1.3em', color: '#81C784', marginBottom: '30px' }}>
+          <p style={{ fontSize: '1.3em', color: '#FFB74D', marginBottom: '30px' }}>
             IoT Smart Energy • Orange Pi / Jetson Nano • LoRa / IPFS • Monitoring Temps Réel
           </p>
           <p style={{ fontSize: '1em', color: '#888', marginBottom: '30px' }}>
@@ -80,13 +81,26 @@ export default function Home() {
             {['✅ Production Ready', '📡 LoRa + IPFS', '🏠 IoT Smart Home', '📊 Analytics IA', '🇪🇺 COSMIC EU'].map((badge, idx) => (
               <span key={idx} style={{
                 padding: '8px 16px',
-                background: 'rgba(76, 175, 80, 0.2)',
-                border: '1px solid rgba(76, 175, 80, 0.4)',
+                background: 'rgba(255, 152, 0, 0.2)',
+                border: '1px solid rgba(255, 152, 0, 0.4)',
                 borderRadius: '20px',
                 fontSize: '0.9em',
-                color: '#4CAF50',
-                fontWeight: 600
-              }}>{badge}</span>
+                color: '#FF9800',
+                fontWeight: 600,
+                transition: 'all 0.3s ease',
+                cursor: 'default'
+              }}
+              onMouseOver={(e) => {
+                e.currentTarget.style.background = 'rgba(255, 152, 0, 0.3)';
+                e.currentTarget.style.transform = 'translateY(-2px)';
+                e.currentTarget.style.boxShadow = '0 5px 15px rgba(255, 152, 0, 0.4)';
+              }}
+              onMouseOut={(e) => {
+                e.currentTarget.style.background = 'rgba(255, 152, 0, 0.2)';
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = 'none';
+              }}
+              >{badge}</span>
             ))}
           </div>
         </header>
@@ -98,41 +112,63 @@ export default function Home() {
           marginBottom: '40px',
           border: '1px solid rgba(255, 255, 255, 0.1)'
         }}>
-          <h2 style={{ color: '#4CAF50', fontSize: '2em', marginBottom: '30px', textAlign: 'center', fontWeight: 700 }}>
+          <h2 style={{ color: '#FF9800', fontSize: '2em', marginBottom: '20px', borderBottom: '2px solid rgba(255, 152, 0, 0.3)', paddingBottom: '10px' }}>
             📊 Architecture IoT Interactive
           </h2>
 
-          <div style={{ display: 'flex', gap: '10px', justifyContent: 'center', marginBottom: '30px', flexWrap: 'wrap' }}>
+          <div style={{ display: 'flex', gap: '10px', justifyContent: 'center', marginBottom: '30px', flexWrap: 'wrap', marginTop: '30px' }}>
             {[
-              { id: 'overview', label: '⚡ Vue Ensemble' },
-              { id: 'hardware', label: '🔧 Hardware' },
-              { id: 'connectivity', label: '📡 Connectivité' },
-              { id: 'monitoring', label: '📊 Monitoring' },
-              { id: 'integration', label: '🏠 Intégration' }
+              { id: 'overview', label: '⚡ Vue Ensemble', icon: '🏗️' },
+              { id: 'hardware', label: '🔧 Hardware', icon: '🔧' },
+              { id: 'connectivity', label: '📡 Connectivité', icon: '📡' },
+              { id: 'monitoring', label: '📊 Monitoring', icon: '📊' },
+              { id: 'integration', label: '🏠 Intégration', icon: '🏠' }
             ].map((diagram) => (
               <button key={diagram.id} onClick={() => handleManualSelect(diagram.id)} style={{
-                padding: '10px 20px',
-                borderRadius: '15px',
-                border: activeDiagram === diagram.id ? '2px solid #4CAF50' : '1px solid rgba(255, 255, 255, 0.2)',
-                background: activeDiagram === diagram.id ? 'rgba(76, 175, 80, 0.2)' : 'rgba(255, 255, 255, 0.05)',
-                color: activeDiagram === diagram.id ? '#81C784' : '#888',
+                padding: '12px 20px',
+                borderRadius: '8px',
+                border: activeDiagram === diagram.id ? '2px solid rgba(255, 152, 0, 0.8)' : '2px solid rgba(255, 255, 255, 0.1)',
+                background: activeDiagram === diagram.id ? 'linear-gradient(135deg, #FF9800 0%, #F57C00 100%)' : 'rgba(255, 255, 255, 0.05)',
+                color: activeDiagram === diagram.id ? '#fff' : '#c0c0c0',
                 cursor: 'pointer',
-                fontSize: '0.9em',
-                fontWeight: 600
-              }}>{diagram.label}</button>
+                fontSize: '0.95em',
+                fontWeight: 600,
+                transition: 'all 0.3s ease',
+                fontFamily: "'Poppins', sans-serif"
+              }}
+              onMouseOver={(e) => {
+                if (activeDiagram !== diagram.id) {
+                  e.currentTarget.style.background = 'rgba(255, 152, 0, 0.15)';
+                  e.currentTarget.style.borderColor = 'rgba(255, 152, 0, 0.4)';
+                  e.currentTarget.style.color = '#FF9800';
+                }
+              }}
+              onMouseOut={(e) => {
+                if (activeDiagram !== diagram.id) {
+                  e.currentTarget.style.background = 'rgba(255, 255, 255, 0.05)';
+                  e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)';
+                  e.currentTarget.style.color = '#c0c0c0';
+                }
+              }}
+              >{diagram.icon} {diagram.label}</button>
             ))}
           </div>
 
           <div style={{
-            background: 'rgba(255, 255, 255, 0.05)',
-            borderRadius: '15px',
+            background: 'rgba(0, 0, 0, 0.2)',
+            borderRadius: '12px',
             padding: '40px',
             textAlign: 'center',
-            minHeight: '300px',
+            minHeight: '400px',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
-            border: '1px solid rgba(76, 175, 80, 0.3)'
+            border: '1px solid rgba(255, 152, 0, 0.3)',
+            fontFamily: 'monospace',
+            color: '#FFB74D',
+            lineHeight: 1.8,
+            overflowX: 'auto',
+            fontSize: '0.9em'
           }}>
             <div style={{ fontSize: '5em', marginBottom: '20px' }} className="pulse">
               {activeDiagram === 'overview' && '⚡'}
@@ -141,15 +177,15 @@ export default function Home() {
               {activeDiagram === 'monitoring' && '📊'}
               {activeDiagram === 'integration' && '🏠'}
             </div>
-            <h3 style={{ color: '#81C784', fontSize: '1.8em', marginBottom: '15px', fontWeight: 700 }}>
-              {activeDiagram === 'overview' && 'Architecture Globale'}
+            <h3 style={{ color: '#FFB74D', fontSize: '1.8em', marginBottom: '15px', fontWeight: 700 }}>
+              {activeDiagram === 'overview' && 'Architecture Globale IoT'}
               {activeDiagram === 'hardware' && 'Orange Pi / Jetson Nano / Arduino'}
               {activeDiagram === 'connectivity' && 'LoRa / IPFS / Cloud'}
               {activeDiagram === 'monitoring' && 'Analytics Temps Réel'}
               {activeDiagram === 'integration' && 'Plans 2D Habitation'}
             </h3>
             <p style={{ color: '#aaa', fontSize: '1.1em' }}>
-              Diagramme détaillé disponible dans la documentation
+              Diagramme ASCII détaillé en cours de développement
             </p>
           </div>
 
@@ -158,40 +194,54 @@ export default function Home() {
           </div>
         </section>
 
-        <section style={{ marginBottom: '40px' }}>
-          <h2 style={{ color: '#4CAF50', fontSize: '2em', marginBottom: '30px', textAlign: 'center', fontWeight: 700 }}>
+        <section className="animate-on-scroll" style={{ background: 'rgba(255, 255, 255, 0.05)', padding: '40px', margin: '30px 0', borderRadius: '15px', border: '1px solid rgba(255, 255, 255, 0.1)', backdropFilter: 'blur(10px)' }}>
+          <h2 style={{ color: '#FF9800', fontSize: '2em', marginBottom: '20px', borderBottom: '2px solid rgba(255, 152, 0, 0.3)', paddingBottom: '10px' }}>
             🔧 Stack Hardware IoT
           </h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '25px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '25px', marginTop: '30px' }}>
             {[
               { icon: '🍊', title: 'Orange Pi', desc: 'SBC ARM64 - GPIO / I2C / SPI - 2GB RAM' },
               { icon: '🤖', title: 'Jetson Nano', desc: 'GPU CUDA - ML Edge - Computer Vision' },
               { icon: '⚙️', title: 'Arduino Sensors', desc: 'Temperature / Humidity / Energy Meters' },
               { icon: '📡', title: 'LoRa Module', desc: 'Long Range - Low Power - 15km range' },
-              { icon: '🔋', title: 'Solar + Battery', desc: 'Autonomie 72h - Panels 100W' },
+              { icon: '⚡', title: 'Énergie Tri-Source', desc: 'Vortex Schauberger (eau) + Tesla tellurique/atmosphérique - Autonomie 100%' },
               { icon: '📊', title: 'IPFS Storage', desc: 'Décentralisé - Immutable - P2P' }
             ].map((hw, idx) => (
               <div key={idx} style={{
-                background: 'rgba(255, 255, 255, 0.05)',
-                padding: '30px',
-                borderRadius: '15px',
-                border: '1px solid rgba(255, 255, 255, 0.1)',
-                textAlign: 'center'
-              }}>
+                background: 'rgba(255, 255, 255, 0.03)',
+                padding: '25px',
+                borderRadius: '12px',
+                border: '1px solid rgba(255, 255, 255, 0.08)',
+                textAlign: 'center',
+                transition: 'transform 0.3s, border-color 0.3s'
+              }}
+              onMouseOver={(e) => {
+                e.currentTarget.style.transform = 'translateY(-5px)';
+                e.currentTarget.style.borderColor = 'rgba(255, 152, 0, 0.5)';
+              }}
+              onMouseOut={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.08)';
+              }}
+              >
                 <div style={{ fontSize: '3.5em', marginBottom: '15px' }}>{hw.icon}</div>
-                <h3 style={{ color: '#81C784', fontSize: '1.4em', marginBottom: '12px', fontWeight: 700 }}>{hw.title}</h3>
-                <p style={{ color: '#c0c0c0', lineHeight: 1.6, fontSize: '0.95em' }}>{hw.desc}</p>
+                <h4 style={{ color: '#FF9800', fontSize: '1.2em', marginBottom: '15px', fontWeight: 700 }}>{hw.title}</h4>
+                <p style={{ color: '#c0c0c0', lineHeight: 1.6, fontSize: '1em' }}>{hw.desc}</p>
               </div>
             ))}
           </div>
         </section>
 
-        <footer style={{ textAlign: 'center', padding: '40px 20px', borderTop: '1px solid rgba(255, 255, 255, 0.1)', marginTop: '60px' }}>
-          <p style={{ fontSize: '1.2em', color: '#81C784', marginBottom: '15px', fontWeight: 600 }}>
-            1 econergy Platform • IoT Smart Energy • COSMIC EU 2025
+        <footer style={{ textAlign: 'center', padding: '40px 20px', borderTop: '1px solid rgba(255, 255, 255, 0.1)', marginTop: '60px', color: '#666' }}>
+          <p style={{ fontSize: '1em', color: '#FFB74D', marginBottom: '10px' }}>
+            Énergie Autonome • IoT Décentralisé • Zéro Dépendance Réseau
           </p>
-          <p style={{ fontSize: '0.95em', color: '#888' }}>
-            Développé par Fred French Touch • Green IoT Made in BE/FR/EU
+          <p style={{ fontSize: '0.9em', color: '#888', marginTop: '10px' }}>
+            FFT Cognitive Foundation • 1 econergy Platform • COSMIC EU 2025
+          </p>
+          <p style={{ marginTop: '15px' }}>
+            <a href="https://github.com/NextAIgeneration" style={{ color: '#FF9800', textDecoration: 'none', marginRight: '20px' }}>GitHub</a>
+            <a href="/docs" style={{ color: '#FF9800', textDecoration: 'none' }}>Documentation</a>
           </p>
         </footer>
 
